@@ -1,19 +1,33 @@
-<link href="css/style.css" rel="stylesheet" />
-/<!-- color is #8AB997 -->
-<body>
-	<h1>MySql Test</h1>
+<head>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
+	<style>bg {background:#8AB997;}</style>
+</head>
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<bg>
 	<img src="resources/fh_logo.png">
+	<p></p>
+	<h1>MySql Test</h1>
+	<p></p>
 
 	<p> Click on the button below to make a cloud "action" call which will return 
 	  the contents of a MySql table running on Amazon RDS</p>
 
-	<button id='run_button'> Get Table Contents </button>
+	<button type="button" id="run_button" class="btn btn-lg btn-danger"> Get Table Contents </button>
+	<!-- <button id='run_button'> Get Table Contents </button> -->
 
 	<div id="sqlResults">
 	</div>
 
-</body>
+</bg>
 <script type="text/javascript">
   var exports = {};
 </script>
