@@ -22,15 +22,21 @@
 		<h1>MySql Test</h1>
 		<p></p>
 
+		<form>
+			<textarea rows="4" cols="100" autofocus maxlength="200" required wrap="soft" id="sqlquery"></textarea>
+
+<!--			Query: <input type="text" name="sqlquery" size="300"> -->
+		</form>
+
 		<p> Click on the button below to make a cloud "action" call which will return 
 		  the contents of a MySql table running on Amazon RDS</p>
 
-		<button type="button" id="run_button" class="btn btn-lg btn-danger"> Get Table Contents </button>
-	</center>
-	<!-- <button id='run_button'> Get Table Contents </button> -->
+		<button type="button" id="run_button" class="btn btn-lg btn-danger"> Submit </button>
+		<!-- <button id='run_button'> Get Table Contents </button> -->
 
-	<div id="sqlResults">
-	</div>
+		<div id="sqlResults" width="100px" >
+		</div>
+	</center>
 
 </bg>
 <script type="text/javascript">

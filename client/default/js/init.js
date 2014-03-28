@@ -14,18 +14,22 @@ $fh.ready(function() {
     // Invoke a cloud action call to get the remote configuration
     // See: http://docs.feedhenry.com/wiki/Actions
 
+    console.log(document.getElementById("sqlquery").value);
+
     $fh.act(
       {
         act:'mysql',
         req: {
-               'query': 'select * from innodb.new_table;'
+//                'query': 'select * from innodb.new_table;'
+                  'query': document.getElementById("sqlquery").value
              }
       },
       function(res) {
         document.getElementById('sqlResults').innerHTML = "<p>" + JSON.stringify(res.rows) + "</p>";
       },
       function(code,errorprops,params) {
-        alert('An error occured: ' + code + ' : ' + errorprops);
+        console.log('An error occured: ' + code + ' : ' + errorprops.error);
+        document.getElementById('sqlResults').innerHTML = '<p>' + 'An error occured: ' + code + ' : ' + errorprops.error + '</p>';
       }
     );
 
