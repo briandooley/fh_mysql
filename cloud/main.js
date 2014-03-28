@@ -20,6 +20,7 @@ exports.getConfig = function(params, callback) {
  @param param.query : the query to execute
  */
 exports.mysql = function(params, cb){
+  console.log('in the cloud running the mysql module');
   var mysql      = require('mysql');
   var connection = mysql.createConnection({
     host     : process.env.MYSQL_HOST,

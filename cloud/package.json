@@ -1,17 +1,15 @@
 {
   "name": "fh-app",
   "version": "0.1.0",
-  "private": true,
-  "dependencies" : {        
+  "dependencies" : { 
+    "geo" : "0.0.3",
     "fh-webapp" : "*",
+    "fh-nodeapp": "*",
     "fh-api" : "*",
-    "express" : "3.3.4",
-    "fh-nodeapp" : "*",
     "mysql" : "2.0.0-alpha8",
-    
-  },
-  "devDependencies":{
-    "proxyquire":"0.4.1",
-    "whiskey": "0.8.3"
+    "libxmljs" : "0.8.1",
+    "express" : "3.3.4",
+    "xml2js" : "0.1.14",
+    "async" : "*"
   }
 }
