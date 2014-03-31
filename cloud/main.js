@@ -5,16 +5,6 @@ var util = require('util');
  * - the return 'callback' method signature is 'callback (error, data)', where 'data' is a JSON object.
 */
 
-/* 'getConfig' server side REST API method.
- * Trivial example of pulling in a shared config file.
- */
-exports.getConfig = function(params, callback) {
-  console.log("In getConfig() call");
-  var cfg = require("config.js");
-  return callback(null, {config: cfg.config});
-};
-
-  
 /*
  Executes a MySQL Query
  @param param.query : the query to execute
@@ -30,9 +20,8 @@ exports.mysql = function(params, cb){
   
   console.log('params are :- ' + params);
 
-  console.log('about to connect');
   connection.connect();
-  console.log('after connect');
+  console.log('connected');
 
   connection.query(params.query, function(err, rows, fields) {
     if (err){
