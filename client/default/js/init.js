@@ -20,16 +20,15 @@ $fh.ready(function() {
       {
         act:'mysql',
         req: {
-//                'query': 'select * from innodb.new_table;'
                   'query': document.getElementById("sqlquery").value
              }
       },
       function(res) {
-        document.getElementById('sqlResults').innerHTML = "<p>" + JSON.stringify(res.rows) + "</p>";
+        document.getElementById('sqlResults').innerHTML = JSON.stringify(res.rows);
       },
       function(code,errorprops,params) {
         console.log('An error occured: ' + code + ' : ' + errorprops.error);
-        document.getElementById('sqlResults').innerHTML = '<p>' + 'An error occured: ' + code + ' : ' + errorprops.error + '</p>';
+        document.getElementById('sqlResults').innerHTML = 'An error occured: ' + code + ' : ' + errorprops.error;
       }
     );
 
